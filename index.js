@@ -25,6 +25,7 @@ app.use(express.json());
 
 // ROUTES
 app.use('/api/transacciones', transaccionRoutes);
+// ROUTES ACCOUNT
 app.use('/api/cuentas', cuentaRoutes);
 
 // SERVER

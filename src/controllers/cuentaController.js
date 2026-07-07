@@ -10,7 +10,8 @@ const crearCuenta = async (req, res) => {
     }
 };
 
-// READ ALL
+
+// ALL
 const obtenerCuentas = async (req, res) => {
     try {
         const cuentas = await Cuenta.find();

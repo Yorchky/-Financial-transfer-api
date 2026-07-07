@@ -6,7 +6,7 @@ const {
     obtenerCuentas
 } = require('../controllers/cuentaController');
 
-router.post('/', crearCuenta);
 router.get('/', obtenerCuentas);
+router.post('/', crearCuenta);
 
 module.exports = router;
