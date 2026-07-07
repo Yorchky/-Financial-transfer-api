@@ -9,4 +9,4 @@ const {
 router.get('/', obtenerCuentas);
 router.post('/', crearCuenta);
 
-module.exports = router;
+module.exports = router; 

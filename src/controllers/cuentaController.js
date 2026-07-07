@@ -9,7 +9,7 @@ const crearCuenta = async (req, res) => {
         res.status(400).json({ error: error.message });
     }
 };
-
+ 
 
 // ALL
 const obtenerCuentas = async (req, res) => {

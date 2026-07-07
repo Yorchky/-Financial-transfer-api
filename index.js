@@ -15,7 +15,7 @@ const cuentaRoutes = require('./src/routes/cuentaRoutes');
 const transaccionRoutes = require('./src/routes/transaccionRoutes');
 
 
-
+ 
 
 // CONEXIÓN A BD
 connectDB();
