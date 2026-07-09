@@ -21,7 +21,4 @@ const obtenerCuentas = async (req, res) => {
     }
 };
 
-module.exports = {
-    crearCuenta,
-    obtenerCuentas
-};
+module.exports = {crearCuenta,obtenerCuentas};
