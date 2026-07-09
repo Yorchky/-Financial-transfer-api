@@ -23,6 +23,14 @@ connectDB();
 // MIDDLEWARE (IMPORTANTE)
 app.use(express.json());
 
+// Ruta principal
+app.get("/", (req, res) => {
+  res.json({
+    status: "OK",
+    message: "Financial Transfer API funcionando "
+  });
+});
+
 // ROUTES
 app.use('/api/transacciones', transaccionRoutes);
 // ROUTES ACCOUNT
