@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+const auth = require("../middlewares/auth");
 const {
     crearTransaccion,
     obtenerTransacciones,
@@ -8,6 +8,8 @@ const {
     actualizarTransaccion,
     eliminarTransaccion
 } = require('../controllers/transaccionController');
+
+router.use(auth);
 
 // CREATE
 router.post('/', crearTransaccion);
