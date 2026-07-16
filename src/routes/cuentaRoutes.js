@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-const {crearCuenta,obtenerCuentas} = require('../controllers/cuentaController');
+const auth = require("../middlewares/auth");
+const { crearCuenta, obtenerCuentas } = require('../controllers/cuentaController');
+
+router.use(auth);
 
 router.get('/', obtenerCuentas);
 router.post('/', crearCuenta);
 
-module.exports = router; 
+module.exports = router;
