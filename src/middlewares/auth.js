@@ -1,6 +1,8 @@
+const jwt = require("jsonwebtoken");
+
 const auth = (req, res, next) => {
 
-    const token = req.header("Authorization");
+    const token = req.header("app-token");
 
     if (!token) {
         return res.status(401).json({
@@ -8,13 +10,23 @@ const auth = (req, res, next) => {
         });
     }
 
-    if (token !== process.env.APPLICATION_TOKEN) {
+    try {
+
+        jwt.verify(
+            token,
+            process.env.JWT_TOKEN_SECRET
+        );
+
+        next();
+
+    } catch (error) {
+
         return res.status(401).json({
             message: "Invalid application token."
         });
+
     }
 
-    next();
 };
 
 module.exports = auth;
