@@ -8,10 +8,7 @@ const generarApplicationToken = () => {
 
     return jwt.sign(
         payload,
-        process.env.JWT_TOKEN_SECRET,
-        {
-            expiresIn: "24h"
-        }
+        process.env.JWT_TOKEN_SECRET
     );
 
 };
