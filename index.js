@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const express = require("express");
+const helmet = require("helmet");
 const app = express();
 
 const PORT = process.env.PORT || 5100;
@@ -21,6 +22,7 @@ const transaccionRoutes = require('./src/routes/transaccionRoutes');
 connectDB();
 
 // MIDDLEWARE (IMPORTANTE)
+app.use(helmet());
 app.use(express.json());
 
 // Ruta principal
